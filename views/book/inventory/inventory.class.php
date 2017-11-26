@@ -21,17 +21,17 @@ class Book_Inventory extends BookIndexView {
                         $title = $book->getTitle();
                         $image = $book->getImage();
                         ?>
-                        
+
                         <div class="new_prod_box">
                             <div class="new_prod_bg">
                                 <a href='<?= base_url ?>/book/detail/<?= $id ?>'><img src='<?= base_url ?>/www/img/books/<?= $image ?>' alt='' title='' class='thumb' border='0' width='60' height='100' /></a></div>
-                                <br /><a href="details.php"><?= $title ?></a><br />
-                        </div>              
+                                <br /><a href='<?= base_url ?>/book/detail/<?= $id ?>'><?= $title ?></a><br />
+                        </div>
 
                         <?php
                     }
-                    ?> 
-                </div>  
+                    ?>
+                </div>
                 <div class="clear"></div>
             </div>
             <!--end of left content-->
@@ -44,4 +44,3 @@ class Book_Inventory extends BookIndexView {
 
 //end of display method
     }
-    

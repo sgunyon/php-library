@@ -40,7 +40,7 @@ class Book_Detail extends BookIndexView {
                     <div class="box_center">
                         <div class="prod_title">Description:<br /><br /></div>
                         <p class="details">
-                            <?= $description ?> 
+                            <?= $description ?>
                             <br/><br/>
                             Publisher: &nbsp&nbsp&nbsp&nbsp&nbsp <?= $publisher ?>  <br/>
                             ISBN: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <?= $isbn ?>  <br/>
@@ -59,14 +59,14 @@ class Book_Detail extends BookIndexView {
                             <a class="more"><img src="<?= base_url ?>/www/img/books/out.gif" alt="" title="" border="0" /></a>
                             <?php
                         } else {
-                            
+
                         }
                         ?>
 
                         <div class="clear"></div>
                         <div class="box_bottom"></div>
                     </div>
-                </div>     
+                </div>
 
             </div><!--end of right content-->
 

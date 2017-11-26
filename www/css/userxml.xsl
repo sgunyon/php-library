@@ -14,7 +14,7 @@
                                 border="0" width="60" height="100"/>
                         </a>
                         <br/>
-                        <a href="details.php">
+                        <a href='<?= base_url ?>/book/detail>'>
                             <xsl:value-of select="title"/>
                         </a>
                         <br/>

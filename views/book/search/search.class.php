@@ -28,18 +28,20 @@ class Book_Search extends BookIndexView {
                         ?>
                         <div id="suggestionDiv">
                             <div class="new_prod_box">
-                                <a href="details.php"><?= $title ?></a><br />
+                                <a href='<?= base_url ?>/book/detail/<?= $id ?>'><?= $title ?></a><br />
                                 <div class="new_prod_bg">
                                     <span class="new_icon"><img src="<?= base_url ?>/www/img/books/new_icon.gif" alt="" title="" /></span>
-                                    <a href='<?= base_url ?>/book/detail/<?= $id ?>'><img src='<?= base_url ?>/www/img/books/<?= $image ?>' alt='' title='' class='thumb' border='0' width='60' height='100' /></a>
+                                    <a href='<?= base_url ?>/book/detail/<?= $id ?>'>
+                                      <img src='<?= base_url ?>/www/img/books/<?= $image ?>' alt='' title='' class='thumb' border='0' width='60' height='100' />
+                                    </a>
                                 </div>
-                            </div>              
+                            </div>
 
                             <?php
                         }
-                        ?> 
+                        ?>
                     </div>
-                </div>  
+                </div>
                 <div class="clear"></div>
             </div>
             <!--end of left content-->
@@ -52,4 +54,3 @@ class Book_Search extends BookIndexView {
 
 //end of display method
     }
-    

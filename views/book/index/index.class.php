@@ -14,7 +14,9 @@ class Book_Index extends BookIndexView {
         <div class="center_content">
             <div class="left_content">
 
-                <div class="title"><span class="title_icon"><img src="<?= base_url ?>/www/img/books/bullet1.gif" alt="" title="" /></span>Featured Book</div>
+                <div class="title"><span class="title_icon">
+                  <img src="<?= base_url ?>/www/img/books/bullet1.gif" alt="" title="" />
+                  </span>Featured Book</div>
 
                 <div class="feat_prod_box">
 
@@ -42,14 +44,14 @@ class Book_Index extends BookIndexView {
 
                             <div class="clear"></div>
                         </div>
-                    </div> 
+                    </div>
 
                     <div class="clear"></div>
                 </div>
 
 
 
-                <div class="title"><span class="title_icon"><img src="<?= base_url ?>/www/img/books/bullet2.gif" alt="" title="" /></span>New books</div> 
+                <div class="title"><span class="title_icon"><img src="<?= base_url ?>/www/img/books/bullet2.gif" alt="" title="" /></span>New books</div>
                 <div class="new_products">
                     <?php
                     $i = 0;
@@ -62,17 +64,17 @@ class Book_Index extends BookIndexView {
                         ?>
 
                         <div class="new_prod_box">
-                            <a href="details.php"><?= $title ?></a><br />
+                            <a href="<?= base_url ?>/book/detail/<?= $id ?>"><?= $title ?></a><br />
                             <div class="new_prod_bg">
                                 <span class="new_icon"><img src="<?= base_url ?>/www/img/books/new_icon.gif" alt="" title="" /></span>
                                 <a href='<?= base_url ?>/book/detail/<?= $id ?>'><img src='<?= base_url ?>/www/img/books/<?= $image ?>' alt='' title='' class='thumb' border='0' width='60' height='100' /></a></div>
-                        </div>              
+                        </div>
 
                         <?php
                         $i++;
                     }
-                    ?> 
-                </div>  
+                    ?>
+                </div>
                 <div class="clear"></div>
             </div>
             <!--end of left content-->
@@ -85,4 +87,3 @@ class Book_Index extends BookIndexView {
 
 //end of display method
     }
-    
