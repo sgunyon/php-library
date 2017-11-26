@@ -1,0 +1,118 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 26, 2017 at 02:35 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 5.6.32
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `library`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `books`
+--
+
+CREATE TABLE `books` (
+  `id` int(4) NOT NULL,
+  `title` char(50) NOT NULL,
+  `author` char(30) NOT NULL,
+  `isbn` char(13) NOT NULL,
+  `publisher` char(30) NOT NULL,
+  `on_hand` int(11) NOT NULL,
+  `image` varchar(50) NOT NULL,
+  `description` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `books`
+--
+
+INSERT INTO `books` (`id`, `title`, `author`, `isbn`, `publisher`, `on_hand`, `image`, `description`) VALUES
+(1, 'The Great Gatsby', 'F. Scott Fitzgerald', '9780743273565', 'Scribner', 5, 'thegreatgatsby.jpg', 'The Great Gatsby, F. Scott Fitzgerald\'s third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when \"gin was the national drink and sex the national obsession,\" it is an exquisitely crafted tale of America in the 1920s.'),
+(2, 'Hamlet', 'Shakespeare', '9780743477123', 'Simon & Schuster', 5, 'hamlet.jpg', 'The Tragical History of Hamlet, Prince of Denmark, written circa 1600, contains the most famous of all Shakespeare\'s lines: \"To be, or not to be: that is the question.\" It is a story about Hamlet\'s quest for revenge and includes themes on madness, rage, treachery, incest, and corruption.'),
+(3, 'The Giving Tree', 'Shel Silverstein', '9780060284510', 'Harper Collins', 5, 'givingtree.jpg', 'Since it was first published fifty years ago, Shel Silverstein\'s moving parable for readers of all ages has offered an affecting interpretation of the gift of giving and a serene acceptance of another\'s capacity to love in return.'),
+(4, 'War and Peace', 'Leo Tolstoy', '9780307266934', 'Knopf', 5, 'warandpeace.jpg', 'War and Peace centers broadly on Napoleon\'s invasion of Russia in 1812 and follows three of the best-known characters in literature: Pierre Bezukhov, the illegitimate son of a count who is fighting for his inheritance and yearning for spiritual fulfillment; Prince Andrei Bolkonsky, who leaves behind his family to fight in the war against Napoleon; and Natasha Rostov, the beautiful young daughter of a nobleman, who intrigues both men.'),
+(5, 'A Tale of Two Cities', 'Charles Dickens', '9780486406510', 'Dover Publications', 5, 'taleoftwocities.jpg', 'Against the backdrop of the French Revolution, Dickens unfolds a masterpiece of drama, adventure, and courage featuring Charles Darnay, a man falsely accused of treason. He bears an uncanny resemblance to the dissolute, yet noble Sydney Carton. Brilliantly plotted, the novel culminates in a daring prison escape in the shadow of the guillotine.'),
+(6, 'The Little Prince', 'Antoine de Saint-Exupery', '9780547978840', 'HMH Books', 5, 'thelittleprince.jpg', 'The Little Prince, first published in 1943, is a novella and the most famous work of the French aristocrat, writer, poet and pioneering aviator Antoine de Saint-Exupery (1900-1944).'),
+(7, 'The Catcher in the Rye', 'J. D. Salinger', '9780316769488', 'Little, Brown and Company', 5, 'catcherintherye.jpg', 'The Catcher in the Rye is set around the 1950s and is narrated by a young man named Holden Caulfield. Holden is not specific about his location while he\'s telling the story, but he makes it clear that he is undergoing treatment in a mental hospital or sanatorium. The events he narrates take place in the few days between the end of the fall school term and Christmas, when Holden is sixteen years old.'),
+(8, 'Charlotte\'s Web', 'E. B. White', '9780739477076', 'Harper Collins', 5, 'charlottesweb.jpg', 'Charlotte\'s Web is a children\'s novel by American author E. B. White and illustrated by Garth Williams; it was published in 1952 by Harper & Brothers. The novel tells the story of a pig named Wilbur and his friendship with a barn spider named Charlotte. When Wilbur is in danger of being slaughtered by the farmer, Charlotte writes messages praising Wilbur (such as \"Some Pig\") in her web in order to persuade the farmer to let him live.'),
+(9, 'To Kill a Mockingbird', 'Harper Lee', '9780446310789', 'Grand Central Publishing', 5, 'tokillamockingbird.jpg', 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it, To Kill A Mockingbird became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film.'),
+(10, '1984', 'George Orwell', '9780451524935', 'Signet Classic', 5, '1984.jpg', 'Written in 1948, 1984 was George Orwell\'s chilling prophecy about the future. And while 1984 has come and gone, Orwell\'s narrative is timelier than ever. 1984 presents a startling and haunting vision of the world, so powerful that it is completely convincing from start to finish. No one can deny the power of this novel, its hold on the imaginations of multiple generations of readers, or the resiliency of its admonitions - a legacy that seems only to grow with the passage of time.'),
+(11, 'On the Road', 'Jack Kerouac', '9780140283297', 'Penguin Books', 5, 'ontheroad.jpg', 'Jack Kerouac\'s masterpiece was the bible of the Beat Generation. With On the Road, Kerouac discovered his voice and his true subject - the search for a place as an outsider in America. On the Road swings to the rhythms of fifties underground America, jazz, sex, generosity, chill dawns, and drugs, with Sal Paradise and his hero Dean Moriarty, traveler and mystic, the living epitome of Beat.'),
+(12, 'Catch-22', 'Joseph Heller', '9781451626650', 'Simon & Schuster', 5, 'catch22.jpg', 'Set in Italy during World War II, this is the story of the incomparable, malingering bombardier, Yossarian, a hero who is furious because thousands of people he has never met are trying to kill him. But his real problem is not the enemy - it is his own army, which keeps increasing the number of missions the men must fly to complete their service.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `firstname` varchar(200) NOT NULL,
+  `lastname` varchar(200) NOT NULL,
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `role` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `username`, `password`, `role`) VALUES
+(1, 'Administrative', 'Account', 'admin', 'admin', 4),
+(2, 'User', 'Name', 'user', 'password', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `books`
+--
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `books`
+--
+ALTER TABLE `books`
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
