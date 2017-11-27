@@ -55,7 +55,8 @@ class Book_Index extends BookIndexView {
                 <div class="new_products">
                     <?php
                     $i = 0;
-                    foreach ($books as $count => $book) {
+                    $new_books = array_reverse($books);
+                    foreach ($new_books as $count => $book) {
                         if ($i == 3)
                             break;
                         $id = $book->getId();
